@@ -17,9 +17,9 @@ export default function Forms(){
         <>
             
             <form>
-                <label>
-                    <input type="text" value={name}placeholder="Podaj imię i nameisko" name="name" onInput={e => setname(e.target.value)} />
-                    <input type="text" value={nick}placeholder="Podaj nickname swój" name="nick" onInput={e => setnick(e.target.value)} />
+                <label>    
+                    <input type="text" value={name} placeholder="Podaj imię i nazwisko" name="name" onInput={e => setname(e.target.value)} />
+                    <input type="text" value={nick} placeholder="Python#1234" name="nick" onInput={e => setnick(e.target.value)} />
                     <select value={group} onChange={e => setgroup(e.target.value)}>
                         {groups.map((r) => { return(<option value={r}>{r}</option>) })}
                     </select>

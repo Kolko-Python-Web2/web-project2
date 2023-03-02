@@ -1,0 +1,9 @@
+/* create responsive footer */
+footer {
+    background-color: #4584b6;
+    color: #ffffff;
+    padding: 20px;
+    clear: both;
+    text-align: center;
+    font-size: 0.8em;
+}

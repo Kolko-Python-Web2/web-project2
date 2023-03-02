@@ -1,0 +1,44 @@
+nav{
+    display: flex;
+    align-items: right;
+    background-color:#ffde57;
+    position: relative;
+}
+ul{
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: 0;
+    
+}
+.menu-item{
+    list-style-type: none;
+    font-weight: 800;
+}
+.menu-item a{
+    text-decoration: none;
+    font-size: 28px;
+    color: #000000;
+    position:relative;
+}
+
+/* menu item after hover underline text from left to right with transition 0.3s */
+
+
+.menu-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: #4584b6;
+    height: 0.2rem;
+    border-radius: 10px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu-item a:hover::after {
+    width: 100%;
+  }

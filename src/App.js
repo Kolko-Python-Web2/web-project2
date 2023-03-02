@@ -2,26 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import Forms from './modules/Forms';
+import Nav from './modules/Nav';
+import Footer from './modules/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-       
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          
-          Learn React
-        </a>
-        <Forms/>
+      <Nav />
+      {/* <BrowserRouter>
+      <Routes>
+          <header className="App-header">
+            <Route path="" element={<Forms />} />
+            <Route path="form" element={<Forms />} />
+            <Route path="users" element={<Forms />} />
       </header>
+          
+        </Routes>
+      </BrowserRouter> */}
+      <Forms/>
+      <Footer />
     </div>
   );
 }
