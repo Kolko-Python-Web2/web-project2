@@ -23,9 +23,6 @@ ul{
     position:relative;
 }
 
-/* menu item after hover underline text from left to right with transition 0.3s */
-
-
 .menu-item a::after {
     content: '';
     position: absolute;
@@ -39,6 +36,6 @@ ul{
     transition: 0.3s ease-in-out;
   }
 
-  .menu-item a:hover::after {
+.menu-item a:hover::after {
     width: 100%;
-  }
+}

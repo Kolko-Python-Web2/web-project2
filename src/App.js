@@ -1,26 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
 import Forms from './modules/Forms';
 import Nav from './modules/Nav';
 import Footer from './modules/Footer';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Users from "./modules/Users"
+import { Switch, Route } from "react-router-dom";
 function App() {
-  
   return (
     <div className="App">
       <Nav />
-      {/* <BrowserRouter>
-      <Routes>
-          <header className="App-header">
-            <Route path="" element={<Forms />} />
-            <Route path="form" element={<Forms />} />
-            <Route path="users" element={<Forms />} />
+      
+      <header className="App-header">
+        <Switch>
+          <Route exact path="/">
+            <h1>Home</h1>
+          </Route>
+          <Route path="/forms">
+            <Forms />
+          </Route>
+          <Route path="/users">
+            <Users/>
+          </Route>
+          </Switch>
+        
       </header>
           
-        </Routes>
-      </BrowserRouter> */}
-      <Forms/>
+
       <Footer />
     </div>
   );

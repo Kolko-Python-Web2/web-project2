@@ -1,21 +1,23 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
+import axios from "axios"
 export default function Forms(){
     const [name, setname] = useState("")
     const [nick, setnick] = useState("")
     const [group, setgroup] = useState("Web")
     const [groups,setgroups] = useState([])
-
+    const [loaded, setLoaded] = useState(false)
     const get = () => {
         const b = {name:name, nick:nick, group:group}
         console.log(b)
-        fetch("http://localhost:8000/users",{headers: {'Accept': 'application/json','Content-Type': 'application/json','Access-Control-Allow-Origin':'*'},method:"POST",body:JSON.stringify(b)})
+        axios.post("http://localhost:8000/users", { b })
+        alert("Dodano użytkownika")
     }
     React.useEffect(() => {
-        fetch("http://localhost:8000/roles").then(data => data.json()).then((e) => (setgroups(e.roles)))
+        axios.get("http://localhost:8000/roles").then((data) => { setgroups(data.data.roles);setLoaded(true) })
     }, [])
     return (
         <>
-            
+            { !loaded? "Not loaded":<>
             <form>
                 <label>    
                     <input type="text" value={name} placeholder="Podaj imię i nazwisko" name="name" onInput={e => setname(e.target.value)} />
@@ -25,7 +27,9 @@ export default function Forms(){
                     </select>
                 </label>
                 <input type="button" value="Push" onClick={get}/>
-            </form>
+                </form>
+                </>
+            }
         </>
     )
     
