@@ -3,6 +3,7 @@ nav{
     align-items: right;
     background-color:#ffde57;
     position: relative;
+    font-family: 'Martian Mono', monospace;
 }
 ul{
     display: flex;

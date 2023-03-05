@@ -10,9 +10,9 @@ export default function Nav() {
                     <li className='menu-item'><Link to="/">Home</Link></li>
                     <li className='menu-item'><Link to="/forms">Forms</Link></li>
                     <li className='menu-item'><Link to="/users">Users</Link></li>
+                    <li className='menu-item'><Link to="/manifest">O nas</Link></li>
                 
                 </ul>
-                <div className="hamburger">P</div>
             </nav>
      
     )

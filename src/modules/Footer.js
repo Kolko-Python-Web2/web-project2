@@ -1,6 +1,10 @@
 import React from 'react'
 import '../Footer.css'
-
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa'
 export default function Footer() {
 
     return (
@@ -8,10 +12,11 @@ export default function Footer() {
             <footer>
                 <p>Designed by <a href="">Web 2</a></p>
                 <div className="social-media">
-                    <a href=""><i className="fab fa-facebook-f"></i></a>
-                    <a href=""><i className="fab fa-twitter"></i></a>
-                    <a href=""><i className="fab fa-instagram"></i></a>
-                    <a href=""><i className="fab fa-youtube"></i></a>
+                    <a href=""><FaFacebookF/></a>
+                    <a href=""><FaTwitter/></a>
+                    <a href=""><FaYoutube/></a>
+                    <a href=""><FaInstagram /></a>
+                    <a href=''><FaGithub/></a>
                 </div>
 
             </footer>

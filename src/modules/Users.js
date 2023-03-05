@@ -1,34 +1,29 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { FaCircleNotch } from 'react-icons/fa';
+import "../Users.css"
 export default function Users() {
     const [users, setUsers] = useState([]);
-    const [roles, setRoles] = useState([]);
     const [loaded, setLoaded] = useState(false);
-    useEffect(() => {
-        axios.get('http://localhost:8000/dc/users')
-            .then(res => {
-                setUsers(res.data.users);
-                setLoaded(true);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }
-        , [])
+    
+    React.useEffect(() => {
+        axios.get("http://localhost:8000/dc/users").then((data) => { setUsers(data.data.data.users);setLoaded(true)})
+    }, [])
     return (
         <div>
-            { !loaded? "Not loaded":<>
+            
+                {!loaded ? <FaCircleNotch icon="spinner" className="spinner" /> : <>
             <h1>Users</h1>
             <ul>
-                {users.map((user) => {
-                    setRoles(user.roles);
-                    return (
-                        <li>{user.name} of <ul>{roles.map((role) => (<li>{role}</li>))}</ul></li>
-                    )
-                })}
+                    {users.map((user) => {
+                        
+                        return (<li>{user.name} is in <ul>{user.roles.map((role) => (<li>{role }</li>))}</ul></li>)
+                    })}
+                
                 </ul>
             </>
-            }
+                }
+            
         </div>
 
         
