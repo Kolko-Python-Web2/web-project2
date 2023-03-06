@@ -2,6 +2,9 @@
     animation: spin infinite 1s linear;
 }
 
+ul{
+    list-style-type: none;
+}
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -11,3 +14,5 @@
         transform: rotate(360deg);
     }
 }
+
+

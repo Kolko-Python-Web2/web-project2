@@ -1,9 +1,10 @@
-nav{
+/* nav{
     display: flex;
     align-items: right;
     background-color:#ffde57;
     position: relative;
     font-family: 'Martian Mono', monospace;
+    font-weight: bold;
 }
 ul{
     display: flex;
@@ -39,4 +40,4 @@ ul{
 
 .menu-item a:hover::after {
     width: 100%;
-}
+} */

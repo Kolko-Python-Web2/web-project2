@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function Nav() {
     return (
         
-            
         <nav>
             
                 <ul>
@@ -13,7 +12,7 @@ export default function Nav() {
                     <li className='menu-item'><Link to="/manifest">O nas</Link></li>
                 
                 </ul>
-            </nav>
+            </nav>  
      
     )
 

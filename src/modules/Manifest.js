@@ -1,8 +1,10 @@
 export default function Manifest() {
     return (
-    <>
-            <h1>Manifest</h1>
-            Cele i założenia Studenckiego Koła Naukowego dotyczącego języka Python "PyHawks"
+		<div className="col-16 ">
+			{/* style text to look nice */}
+			<h1>Manifest</h1>
+		
+            <h2>Cele i założenia Studenckiego Koła Naukowego dotyczącego języka Python "PyHawks"</h2>
 Rozdział I
 Postanowienia ogólne
 § 1. Nazwa koła
@@ -114,8 +116,7 @@ Postanowienia końcowe
 			
 
 
-
-    </>
+	</div>
     )
             
 }
