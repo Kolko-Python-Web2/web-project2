@@ -1,40 +1,33 @@
-import './App.css';
 import Forms from './modules/Forms';
 import Nav from './modules/Nav';
 import Footer from './modules/Footer';
 import Users from "./modules/Users"
 import Manifest from "./modules/Manifest"
+import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import Favicon from 'react-favicon'
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <Nav />
-      
-      <header className="App-header container">
-        
-
-        <Favicon url='http://oflisback.github.io/react-favicon/img/github.ico' />
-        
         <Switch>
           <Route exact path="/">
-            <h1>Home</h1>
+          <h1>Home</h1>
+          <Footer />
           </Route>
           <Route path="/forms">
-            <Forms />
+          <Forms />
+          <Footer />
           </Route>
           <Route path="/users">
-            <Users/>
+          <Users />
+          <Footer />
           </Route>
           <Route path="/manifest">
-            <Manifest />
+          <Manifest />
+          <Footer />
           </Route>
           </Switch>
-        
-      </header>
-          
-
-      <Footer />
     </div>
   );
 }

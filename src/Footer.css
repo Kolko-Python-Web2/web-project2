@@ -1,20 +1,21 @@
-/* create responsive footer */
-
-footer {
-    background-color: #4584b6;
-    color: #ffffff;
-    padding: 20px;
-    clear: both;
-    text-align: center;
+footer{
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
     font-size: 1em;
+    font-weight: 500;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color:#ffde57;
+    color: black;
+    margin-top:100px;
+    width: 100vw;
 }
-
-a:link {
-    text-decoration: none;
-    color: #ffffff;
+.social-media{
+    color: black !important;
+    margin-bottom: 0.5em;
 }
-  
-a:visited {
+a{
+    color: red;
     text-decoration: none;
-    color: #ffffff;
 }
