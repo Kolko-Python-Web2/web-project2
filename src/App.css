@@ -1,0 +1,7 @@
+.box {
+  background: linear-gradient(
+    90deg,
+    rgba(75, 139, 190, 1) 40%,
+    rgba(255, 212, 59, 1) 57%
+  );
+}
